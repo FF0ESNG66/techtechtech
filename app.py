@@ -5,10 +5,11 @@ import git
 
 app = Flask(__name__)
 
-print('here I am')
+
 
 @app.route('/update_server', methods=['POST'])
 def webhook():
+    print('here I am')
     if request.method == 'POST':
         repo = git.Repo('/home/SNG77/techtechtech')
         print(repo)
